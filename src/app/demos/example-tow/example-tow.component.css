@@ -1,0 +1,32 @@
+.select-container {
+  margin: 30px;
+}
+.dropdown-menu {
+  width: 320px;
+}
+
+.btn-add {
+  border: none;
+  border-bottom: 1px solid #aaa;
+  border-radius: 0;
+  padding: 0;
+  height: 41px;
+  background: transparent;
+  min-width: 200px;
+  text-align: right;
+}
+
+.btn-add span {
+  border: 1px solid #ccc;
+  color: #ccc;
+  border-radius: 53px;
+  padding: 0px 10px 2px 10px;
+  font-size: 20px;
+}
+.dropdown-toggle::after {
+  content: none;
+}
+
+.dropdown-item a {
+  color: black;
+}

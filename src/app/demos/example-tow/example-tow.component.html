@@ -1,0 +1,66 @@
+<div class="select-container" [ngClass]="hasError ? 'error' : 'success'">
+  <p>Formule:</p>
+  <div class="formula-text" *ngIf="formulaList.length">
+    <ul>
+      <li *ngFor="let item of formulaList">
+        <!-- <span class="remove-formula" (click)="removeFromFormula(item)">x</span> -->
+        <span [class]="getStyle(item)">{{ item.text }}</span>
+        <!-- <select>
+          <option *ngFor="let option of getSelectList(item)">{{
+            option.text
+          }}</option>
+        </select> -->
+      </li>
+    </ul>
+  </div>
+  <div class="formula-select">
+    <div ngbDropdown class="d-inline-block">
+      <button class="btn-add" id="dropdownForm1" ngbDropdownToggle>
+        <span>+</span>
+      </button>
+      <div ngbDropdownMenu aria-labelledby="dropdownForm1">
+        <ngb-tabset [destroyOnHide]="false">
+          <ngb-tab title="{{ operands.text }}">
+            <ng-template ngbTabContent>
+              <ul>
+                <li
+                  class="dropdown-item"
+                  *ngFor="let item of operands.children"
+                  (click)="selectAction(item)"
+                >
+                  <a href="#">{{ item.text }}</a>
+                </li>
+              </ul>
+            </ng-template>
+          </ngb-tab>
+          <ngb-tab title="{{ operators.text }}">
+            <ng-template ngbTabContent>
+              <ul>
+                <li
+                  class="dropdown-item"
+                  *ngFor="let item of operators.children"
+                  (click)="selectAction(item)"
+                >
+                  <a href="#">{{ item.text }}</a>
+                </li>
+              </ul>
+            </ng-template>
+          </ngb-tab>
+          <ngb-tab title="{{ mathFunctionslist.text }}">
+            <ng-template ngbTabContent>
+              <ul>
+                <li
+                  class="dropdown-item"
+                  *ngFor="let item of mathFunctionslist.children"
+                  (click)="selectAction(item)"
+                >
+                  <a href="#">{{ item.text }}</a>
+                </li>
+              </ul>
+            </ng-template>
+          </ngb-tab>
+        </ngb-tabset>
+      </div>
+    </div>
+  </div>
+</div>

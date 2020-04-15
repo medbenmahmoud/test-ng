@@ -1,0 +1,28 @@
+<div class="select-container" [ngClass]="hasError ? 'error' : 'success'">
+  <p>Formule:</p>
+  <div class="formula-text" *ngIf="formulaList.length">
+    <ul>
+      <li *ngFor="let item of formulaList">
+        <!-- <span class="remove-formula" (click)="removeFromFormula(item)">x</span> -->
+        <!-- <span>{{item.text}}</span> -->
+        <select [class]="getStyle(item)">
+          <option *ngFor="let option of getSelectList(item)">{{
+            option.text
+          }}</option>
+        </select>
+      </li>
+    </ul>
+  </div>
+  <div class="formula-select">
+    <ng-select2
+      #ngSelect
+      [data]="exampleData"
+      [options]="options"
+      [(ngModel)]="value"
+      (valueChanged)="onValueChanged($event)"
+      (onSelect)="onSelect($event)"
+      (onUnSelect)="onUnSelect($event)"
+    >
+    </ng-select2>
+  </div>
+</div>

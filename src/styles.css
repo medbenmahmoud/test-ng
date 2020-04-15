@@ -1,0 +1,73 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+
+.formula-text,
+.formula-select {
+  display: inline-block;
+}
+.error p {
+  color: tomato;
+}
+.success p {
+  color: turquoise;
+}
+
+.formula-text {
+  border-bottom: 1px solid #aaa;
+  height: 32px;
+}
+.formula-select {
+  min-width: 200px;
+}
+.formula-text li {
+  display: inline;
+  margin-right: 10px;
+}
+.select2-container--default .select2-selection--multiple {
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  border-bottom: 1px solid #aaa;
+  border-radius: 0 !important;
+}
+.select2-container--default
+  .select2-selection--multiple
+  .select2-selection__choice {
+  background-color: white !important;
+  border: none !important;
+}
+
+.select2-container--default.select2-container--focus
+  .select2-selection--multiple {
+  border: none;
+  border-bottom: 1px solid black;
+}
+.select2-container--default
+  .select2-selection--multiple
+  .select2-selection__choice__remove {
+  color: transparent;
+}
+.select2-container--default
+  .select2-selection--multiple
+  .select2-selection__choice:hover
+  > .select2-selection__choice__remove {
+  color: #999 !important;
+}
+
+.formula-text select {
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: "";
+}
+.formula-text select::-ms-expand {
+  display: none;
+}
+
+.bold {
+  font-weight: bold;
+}
+.italic {
+  font-style: italic;
+}
